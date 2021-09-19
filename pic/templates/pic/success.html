@@ -22,7 +22,7 @@
         {% else %}
 
       <label for="IMAGE_NAME">Please Enter the Name for the image below -:</label>
-      <input type="text" class="form-control" name="IMAGE_NAME" id="IMAGE_NAME" />
+      <input type="text" class="form-control" value="Image Name" name="IMAGE_NAME" id="IMAGE_NAME" required/>
   
       {% endif %}
       <div class="text-center">
@@ -34,8 +34,9 @@
   
 
       <div class="d-flex justify-content-md-center">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
+        <br><br>
+      <nav aria-label="Page navigation example mt-5">
+        <ul class="pagination mt-1">
           {% if page_obj.has_previous %}
           <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
           {% endif %}
@@ -74,7 +75,7 @@
 
       anchor[index].addEventListener("click", function () {
         inputt = document.getElementById("IMAGE_NAME").value;
-        this.href += "&" + key + "=" + inputt;
+          this.href += "&" + key + "=" + inputt;   
       });
 
     }
